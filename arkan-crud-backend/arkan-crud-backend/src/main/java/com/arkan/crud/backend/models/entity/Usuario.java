@@ -23,8 +23,9 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	
+	/*
 	@NotNull(message = "La ciudad no puede ser nula")
+	*/
 	@ManyToOne
 	@JoinColumn(name = "id_ciudad")
 	private Ciudad ciudad; 
@@ -44,15 +45,13 @@ public class Usuario implements Serializable {
 
 
 	@NotNull(message = "El nombre no puede ser nulo")
-	@Max(value = 50, message = "Nombre no debe ser mayor a 50")
 	private String nombre;
 	
+
 	@NotNull(message = "El Apellido no puede ser nulo")
-	@Max(value = 50, message = "Apellido no debe ser mayor a 50")
 	private String apellido;
-	
+
 	@NotNull(message = "El email no puede ser nulo")
-	@Max(value = 150, message = "Email no debe ser mayor a 150")
 	@Email(message = "Email debe ser valido")
 	private String email;
 	

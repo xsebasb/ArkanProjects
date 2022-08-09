@@ -22,8 +22,7 @@ public class Ciudad implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull(message = "El nombre no puede ser nulo")
-	@Max(value = 50, message = "Nombre no debe ser mayor a 50")
+	@NotNull(message = "El nombre de ciudad no puede ser nulo")
 	private String nombre_ciudad;
 	
 	@JsonBackReference

@@ -25,21 +25,20 @@ public class UsuarioServiceImpl implements IUsuarioService{
 	@Override
 	@Transactional
 	public void save(Usuario usuario) {
-		// TODO Auto-generated method stub
-		
+		 usuarioDao.save(usuario);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
 	public Usuario findById(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return usuarioDao.findById(id).orElse(null);
 	}
 
 	@Override
 	@Transactional
 	public void delete(Usuario usuario) {
-		// TODO Auto-generated method stub
+		usuarioDao.delete(usuario);
 		
 	}
 
