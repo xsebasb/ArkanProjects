@@ -1,13 +1,16 @@
 package com.arkan.crud.backend.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
@@ -22,10 +25,24 @@ public class Usuario implements Serializable {
 	private Long id;
 	
 	@NotNull(message = "La ciudad no puede ser nula")
-	@OneToOne()
+	@ManyToOne
 	@JoinColumn(name = "id_ciudad")
-	private Ciudad ciudad;
-	
+	private Ciudad ciudad; 
+
+
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
+	}
+
+	public Usuario() {
+		super();
+	}
+
+
 	@NotNull(message = "El nombre no puede ser nulo")
 	@Max(value = 50, message = "Nombre no debe ser mayor a 50")
 	private String nombre;

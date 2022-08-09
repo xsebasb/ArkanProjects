@@ -9,5 +9,7 @@ INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Me
 INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Cerquera', 'oscar.cerquera@gmail.com','Oscar',3);
 INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Vitery', 'claudia.vitery@gmail.com','Claudia',4);
 INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Vitery', 'erley.vitery@gmail.com','erley',6);
+INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Munoz', 'juan.munoz@gmail.com','Juan',1);
+
 
 
