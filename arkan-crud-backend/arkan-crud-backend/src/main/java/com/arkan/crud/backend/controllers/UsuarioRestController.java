@@ -17,6 +17,7 @@ public class UsuarioRestController {
 	@Autowired
 	private IUsuarioService usuarioService;
 
+	/**Method Get**/
 	@GetMapping("/usuarios")
 	public List<Usuario> index() {
 		List<Usuario> usuarios = this.usuarioService.findAll();
