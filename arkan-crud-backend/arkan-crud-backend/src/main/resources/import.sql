@@ -13,3 +13,4 @@ INSERT INTO `arkan`.`usuario`(`apellido`,`email`,`nombre`,`id_ciudad`)VALUES('Mu
 
 
 
+

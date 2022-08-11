@@ -6,19 +6,36 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes} from '@angular/router';
+import { FormsModule } from '@angular/forms'
+import { UsuarioService } from './services/usuario.service';
+import { FormComponent } from './usuario/form.component';
+
+const routes: Routes = [
+  // {path: '', redirectTo: '/usuario ', pathMatch: 'full'},
+  {path: 'usuarios', component: UsuarioComponent},
+  {path: 'usuario/form', component: FormComponent},
+
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
