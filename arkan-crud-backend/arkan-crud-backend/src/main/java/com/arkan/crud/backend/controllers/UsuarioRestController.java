@@ -26,7 +26,7 @@ public class UsuarioRestController {
 	private IUsuarioService usuarioService;
 
 
-	@GetMapping("/usuarios")
+	@GetMapping("/usuario")
 	public List<Usuario> index() {
 		List<Usuario> usuarios = this.usuarioService.findAll();
 		return usuarios;

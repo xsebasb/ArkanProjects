@@ -11,11 +11,15 @@ import { RouterModule, Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms'
 import { UsuarioService } from './services/usuario.service';
 import { FormComponent } from './usuario/form.component';
+import { CiudadComponent } from './ciudad/ciudad.component';
+import { CiudadService } from './services/ciudad.service';
 
 const routes: Routes = [
-  // {path: '', redirectTo: '/usuario ', pathMatch: 'full'},
+  {path: '', redirectTo: '/usuarios', pathMatch: 'full'},
   {path: 'usuarios', component: UsuarioComponent},
   {path: 'usuario/form', component: FormComponent},
+  { path: 'usuarios/form/:id', component: FormComponent },
+  { path: 'ciudad/form', component: CiudadComponent }
 
 ];
 
@@ -26,7 +30,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     UsuarioComponent,
-    FormComponent
+    FormComponent,
+    CiudadComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [UsuarioService],
+  providers: [UsuarioService, CiudadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
